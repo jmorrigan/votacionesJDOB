@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:dataList value="#{vista3.ganador}" var="dato">
+                <p:column headerText="EDAD">
+                    <h:outputText value="#{dato.partido}"></h:outputText>
+                 </p:column>
+                <p:column headerText="NOMBRE">
+          <h:outputText value="#{dato.nombre}"></h:outputText>
+                </p:column>
+                <p:column headerText="IMAGEN">
+                    <p:graphicImage value="/folder/#{dato.url_foto}" width="200px"/> 
+                </p:column>
+            </p:dataList>
+            <h:commandButton action="#{vista3.imprimir()}" value="imprimir"></h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+
